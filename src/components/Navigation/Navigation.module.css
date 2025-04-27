@@ -1,0 +1,31 @@
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 40px;
+    background-color: #333;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease, transform 0.3s ease;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    font-family: 'Arial', sans-serif;
+}
+
+.link:hover,
+.activeLink {
+    color: #00d4ff;
+    border-bottom: 2px solid #00d4ff;
+    transform: translateY(-2px);
+}
+
+.link:focus {
+    outline: none;
+}
