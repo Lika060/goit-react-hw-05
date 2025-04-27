@@ -3,10 +3,10 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
-    color: #f5f5f5;
+    color: #ff0000;
     font-family: "Garamond", serif;
     line-height: 1.6;
-    background-color: #2c3e50;
+    background-color: #ff0000;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
@@ -72,7 +72,7 @@
 h2 {
     font-size: 2.2rem;
     margin-bottom: 1rem;
-    color: #f1c40f;
+    color: #522c03;
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }

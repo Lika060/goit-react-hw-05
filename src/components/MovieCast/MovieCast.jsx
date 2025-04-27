@@ -21,7 +21,7 @@ const MovieCast = () => {
   }, [movieId]);
 
   return (
-    <ul className={styles.castList}>
+    <ul className={styles.list}>
       {castList.map((actor) => (
         <li key={actor.cast_id} className={styles.castItem}>
           <img

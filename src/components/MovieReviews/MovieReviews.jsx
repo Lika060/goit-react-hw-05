@@ -21,7 +21,8 @@ const MovieReviews = () => {
   }, [movieId]);
 
   return (
-    <ul className={styles.reviewList}>
+    <ul className={styles.list}>
+
       {reviewList.length === 0 ? (
         <li>No reviews available</li>
       ) : (

@@ -1,19 +1,20 @@
+
 import axios from "axios";
 
-const API_KEY = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MzI3ZDUwNWFmZDljOTI4NTAwNzNiZmJjNTkyZjU2NSIsIm5iZiI6MTc0NDgxMDM3OC40MzcsInN1YiI6IjY3ZmZiMThhZjM5YzczMDEyNWQ5MGYyMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.tH0kSEcx57EkO-2X8JpTIgbkT1N9v0Lm3ORHHp69ZeY";
-const BASE_API_URL = "https://api.themoviedb.org/3";
+const API_TOKEN = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MzI3ZDUwNWFmZDljOTI4NTAwNzNiZmJjNTkyZjU2NSIsIm5iZiI6MTc0NDgxMDM3OC40MzcsInN1YiI6IjY3ZmZiMThhZjM5YzczMDEyNWQ5MGYyMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.tH0kSEcx57EkO-2X8JpTIgbkT1N9v0Lm3ORHHp69ZeY";
+const BASE_URL = "https://api.themoviedb.org/3";
 
-const apiClient = axios.create({
-  baseURL: BASE_API_URL,
+const api = axios.create({
+  baseURL: BASE_URL,
   headers: {
-    Authorization: API_KEY,
+    Authorization: API_TOKEN,
   },
 });
 
-export const getTrendingMovies = () => apiClient.get("/trending/movie/day");
+export const fetchTrendingMovies = () => api.get("/trending/movie/day");
 
-export const searchMoviesByQuery = (query) =>
-  apiClient.get("/search/movie", {
+export const searchMovies = (query) =>
+  api.get("/search/movie", {
     params: {
       query,
       include_adult: false,
@@ -22,10 +23,9 @@ export const searchMoviesByQuery = (query) =>
     },
   });
 
-export const fetchMovieDetails = (movieId) => apiClient.get(`/movie/${movieId}`);
+export const getMovieDetails = (movieId) => api.get(`/movie/${movieId}`);
 
-export const fetchMovieCredits = (movieId) =>
-  apiClient.get(`/movie/${movieId}/credits`);
+export const getMovieCredits = (movieId) => api.get(`/movie/${movieId}/credits`);
 
-export const fetchMovieReviews = (movieId) =>
-  apiClient.get(`/movie/${movieId}/reviews`);
+export const getMovieReviews = (movieId) => api.get(`/movie/${movieId}/reviews`);
+

@@ -20,7 +20,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className={styles.homePage}>
+    <div className={styles.container}>
       <h1>Trending Movies Today</h1>
       {moviesData.length > 0 ? (
         <MovieList movies={moviesData} />
